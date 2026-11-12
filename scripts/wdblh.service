@@ -1,0 +1,30 @@
+# WDBLH-only template. Render with render_wdblh_service.py; do not install directly.
+[Unit]
+Description=WDBLH controller, HTTPS gamepad and local control daemon
+Wants=network-online.target
+After=network-online.target
+RequiresMountsFor="@PROJECT@"
+
+[Service]
+Type=oneshot
+RemainAfterExit=yes
+Environment="WDBLH_PROJECT=@PROJECT@"
+Environment="WDBLH_BRIDGE_USER=@BRIDGE_USER@"
+@ENVIRONMENT_FILE@
+WorkingDirectory=@WORKING_DIRECTORY@
+ExecStart=/bin/bash "@PROJECT@/scripts/wdblh_boot.sh"
+# Preserve Passive/rearm semantics: never auto-restart motion after a fault.
+Restart=no
+TimeoutStartSec=150
+TimeoutStopSec=15
+KillMode=control-group
+KillSignal=SIGINT
+User=root
+Nice=-10
+LimitMEMLOCK=infinity
+StandardInput=null
+StandardOutput=journal
+StandardError=journal
+
+[Install]
+WantedBy=multi-user.target

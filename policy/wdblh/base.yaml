@@ -1,0 +1,42 @@
+# Copyright (c) 2025
+# SPDX-License-Identifier: Apache-2.0
+# Joint order: FL(0-2), FR(3-5), RL(6-8), RR(9-11) — matches training
+
+wdblh:
+  dt: 0.001
+  decimation: 20
+  fixed_kp: [80.0, 80.0, 80.0,
+             80.0, 80.0, 80.0,
+             80.0, 80.0, 80.0,
+             80.0, 80.0, 80.0]
+  fixed_kd: [3.0, 3.0, 3.0,
+             3.0, 3.0, 3.0,
+             3.0, 3.0, 3.0,
+             3.0, 3.0, 3.0]
+  num_of_dofs: 12
+
+  wheel_indices: []
+  control_type: "position"
+  rl_kp: [20.0, 20.0, 20.0,
+          20.0, 20.0, 20.0,
+          20.0, 20.0, 20.0,
+          20.0, 20.0, 20.0]
+  rl_kd: [0.5, 0.5, 0.5,
+          0.5, 0.5, 0.5,
+          0.5, 0.5, 0.5,
+          0.5, 0.5, 0.5]
+  torque_limits: [23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23, 23]
+  default_dof_pos: [ 0.101629,  0.795709,  1.004208,    # FL   (实测 2026-10-30，已应用 motor_direction)
+                     0.431721, -0.947260,  1.551705,    # FR
+                    -0.528746,  0.623469,  0.199533,    # RL
+                     0.023779, -0.572730,  1.668057]    # RR
+  joint_names: ["FL_hip_joint", "FL_thigh_joint", "FL_calf_joint",
+                "FR_hip_joint", "FR_thigh_joint", "FR_calf_joint",
+                "RL_hip_joint", "RL_thigh_joint", "RL_calf_joint",
+                "RR_hip_joint", "RR_thigh_joint", "RR_calf_joint"]
+  joint_controller_names: ["FL_hip_controller", "FL_thigh_controller", "FL_calf_controller",
+                           "FR_hip_controller", "FR_thigh_controller", "FR_calf_controller",
+                           "RL_hip_controller", "RL_thigh_controller", "RL_calf_controller",
+                           "RR_hip_controller", "RR_thigh_controller", "RR_calf_controller"]
+  joint_mapping: [6, 7, 4, 9, 3, 1, 2, 8, 0, 10, 5, 11]
+  motor_direction: [1, 1, -1, 1, -1, 1, -1, 1, -1, -1, -1, 1]

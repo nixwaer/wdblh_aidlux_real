@@ -1,0 +1,4 @@
+# WDBLH 固定串口软链：/dev/wdblh_imu（DM-IMU-L1）、/dev/wdblh_motor（CH343）
+# 安装：sudo cp scripts/99-wdblh.rules /etc/udev/rules.d/ && sudo udevadm control --reload && sudo udevadm trigger
+SUBSYSTEM=="tty", ATTRS{idVendor}=="6877", ATTRS{idProduct}=="4d55", SYMLINK+="wdblh_imu", MODE="0660", GROUP="dialout"
+SUBSYSTEM=="tty", ATTRS{idVendor}=="1a86", ATTRS{idProduct}=="55d3", SYMLINK+="wdblh_motor", MODE="0660", GROUP="dialout"

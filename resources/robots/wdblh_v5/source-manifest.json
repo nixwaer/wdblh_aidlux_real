@@ -1,0 +1,122 @@
+{
+  "source_directory": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5",
+  "urdf": "urdf/wdblh_v5.urdf",
+  "robot_name": "wdblh_v5",
+  "files": [
+    {
+      "path": "meshes/FL_calf.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FL_calf.STL",
+      "bytes": 813884,
+      "sha256": "ddf51d78a70d8fd0e6f3d8a87f4e552776579834f28aa19bbb2bb5479161f55f"
+    },
+    {
+      "path": "meshes/FL_foot.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FL_foot.STL",
+      "bytes": 479884,
+      "sha256": "f11bb13727e39c5dff94abcf492279bcbd85219ce9c9083e9256f8a9fb21509d"
+    },
+    {
+      "path": "meshes/FL_hip.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FL_hip.STL",
+      "bytes": 3060284,
+      "sha256": "228cad40618ed550d5e5f73839db297db3f1a2179982b2887f64cf14e01253ec"
+    },
+    {
+      "path": "meshes/FL_thigh.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FL_thigh.STL",
+      "bytes": 3989884,
+      "sha256": "eed76c85125de3663aab139f1a75b8dc78da6cc5bfaf2a854ee74a4f1e16b534"
+    },
+    {
+      "path": "meshes/FR_calf.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FR_calf.STL",
+      "bytes": 813884,
+      "sha256": "e0d295781a1e3b5e0b09facbf4548754fa6e6bb46b0e0a9bafd187280bb6d1c9"
+    },
+    {
+      "path": "meshes/FR_foot.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FR_foot.STL",
+      "bytes": 479884,
+      "sha256": "fd59e39f50b0b400234f280a16eb3838deae89f8d350409ab64fd2737e05befa"
+    },
+    {
+      "path": "meshes/FR_hip.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FR_hip.STL",
+      "bytes": 3060284,
+      "sha256": "74f39015471bfbd62084561161c0faf328050dab84be0ab0281017db8dc6f383"
+    },
+    {
+      "path": "meshes/FR_thigh.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/FR_thigh.STL",
+      "bytes": 3989984,
+      "sha256": "bc2eaeada3434db4870a594d44fa70f8cf3bca601f6eb6aca069e59443f85369"
+    },
+    {
+      "path": "meshes/RL_calf.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RL_calf.STL",
+      "bytes": 813884,
+      "sha256": "5d82f0340ceac2c1f596a3a65e73f0a6681618994746078f7b2534b8e5f5d57a"
+    },
+    {
+      "path": "meshes/RL_foot.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RL_foot.STL",
+      "bytes": 479884,
+      "sha256": "e4994367954a4504a3c82ae51bc615167ffad8254208986b0ed1369845540a51"
+    },
+    {
+      "path": "meshes/RL_hip.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RL_hip.STL",
+      "bytes": 3060284,
+      "sha256": "9d15f9d7b1eae53460fc9249de73b894dde0a67d879eaf144c4041eb525338c6"
+    },
+    {
+      "path": "meshes/RL_thigh.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RL_thigh.STL",
+      "bytes": 3989884,
+      "sha256": "9d292cc01853477d29acfdfdae52f48365731623341fc779398f91bc896e81b1"
+    },
+    {
+      "path": "meshes/RR_calf.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RR_calf.STL",
+      "bytes": 813884,
+      "sha256": "f0e4a8337de9cb768f9101d40c31711f3a51f3590a2e3e305430961f4c886f02"
+    },
+    {
+      "path": "meshes/RR_foot.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RR_foot.STL",
+      "bytes": 479884,
+      "sha256": "0b94a14dac9f95754c28a1aea28225d107e779750a098160f7fa7d1d2f0bb4e3"
+    },
+    {
+      "path": "meshes/RR_hip.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RR_hip.STL",
+      "bytes": 3060284,
+      "sha256": "5f451a71cc5764f1d47ccf6601e3cb032ce0e41bae43f38cdf4c39e5c607c5e8"
+    },
+    {
+      "path": "meshes/RR_thigh.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/RR_thigh.STL",
+      "bytes": 3989984,
+      "sha256": "474a9fda6dd5aebcf9ab894ccb5bc0c08dc7bb3070bdf6889790eefcaea5bb15"
+    },
+    {
+      "path": "meshes/base_link.STL",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/meshes/base_link.STL",
+      "bytes": 1484,
+      "sha256": "6e10051bf15d520d2a0a5ebd12303e5c6284d6a94abd088c518cf45a134e40a0"
+    },
+    {
+      "path": "urdf/wdblh_v5.urdf",
+      "source": "/home/fth/robot_ws/HTDW4438_HIMloco/resources/robots/wdblh_v5/urdf/wdblh_v5.urdf",
+      "bytes": 15750,
+      "sha256": "10e940791a3ad87cc0c998b34c8742dcf5594e3f2893e31aede37ac80b12076b"
+    }
+  ],
+  "changes": "URDF and all referenced meshes copied without modification; relative paths retained.",
+  "source_project_license": {
+    "path": "SOURCE_LICENSE",
+    "source": "/home/fth/robot_ws/HTDW4438_HIMloco/LICENSE",
+    "bytes": 1065,
+    "sha256": "b0f1a284fd17e7ba92cf771d2792ce671fb0ad02ba8786acb1c6026ceaa1c68f"
+  }
+}
