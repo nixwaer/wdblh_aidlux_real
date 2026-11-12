@@ -1,6 +1,7 @@
-# WDBLH 框架文档
-
-本仓库提供 WDBLH 四足机器人的强化学习实机部署框架。策略模型已通过 [AIMO](https://aimo.aidlux.com/#/model-convert) 进行加速。
+![wdblh ](resources/robots/wdblh_v5/image.png)
+# WDBLH 犀牛派x1框架文档
+本项目基于（Isaac Gym / HIMloco ） 训练
+本仓库提供 WDBLH 四足机器人的强化学习实机部署框架。<br> **策略模型已通过 [AIMO](https://aimo.aidlux.com/#/model-convert) 进行加速。** 
 
 ## 功能与范围
 
@@ -15,6 +16,32 @@ LibTorch 和 CUDA 构建路线已移除。
 工程保留可选 ONNX 后端代码，尚未提供与当前配置匹配的 ONNX 模型。
 
 ## 项目结构
+
+<details>
+<summary>📁 src — 主控代码（点击展开）</summary>
+
+- [📁 rl_sar](src/rl_sar/)
+- [📄 主控程序](src/rl_sar/src/rl_real_wdblh.cpp)
+- [📄 状态机](src/rl_sar/fsm_robot/fsm_wdblh.hpp)
+
+</details>
+
+<details>
+<summary>📁 policy — 策略与配置</summary>
+
+- [📄 基础配置](policy/wdblh/base.yaml)
+- [📄 策略配置](policy/wdblh/himloco/config.yaml)
+- [📄 模型说明](policy/wdblh/himloco/model-card.md)
+
+</details>
+
+<details>
+<summary>📁 scripts — 启动和安装脚本</summary>
+
+- [📄 启动主控](scripts/run_wdblh.sh)
+- [📄 离线检查](scripts/check_offline.sh)
+
+</details>
 
 主要目录与关键文件如下：
 
@@ -111,20 +138,16 @@ Python 需要 3.10 或更高版本，并准备 pip 和虚拟环境工具。
 
 | 依赖 | 使用条件 |
 | --- | --- |
-| AidLite C++ SDK | 当前 AIDEM 模型必需；启用 `ENABLE_AIDLITE=ON` 时需要头文件和库 |
+| AidLite C++ SDK | AIDEM 模型必需；启用 `ENABLE_AIDLITE=ON` 时需要头文件和库 |
 | QNN248 DSP 插件 | 当前模型必需，应与目标设备和 AidLite 环境匹配 |
 | 设备授权 | 按供应商要求为目标设备准备 |
 | Bash 与系统工具 | 启动脚本使用 Bash、`flock`、`runuser` 和 `pgrep`；指定网卡探测时使用 `ip` |
 | systemd 与 udev | 安装服务和固定串口别名时使用 |
 
-SDK（软件开发工具包）、插件和授权由使用者按供应商说明准备。
-目标板上的完整版本组合尚待复核，不能用离线电脑的依赖版本替代。
-
 ONNX Runtime 仅在启用 `ENABLE_ONNX=ON` 时需要，当前 QNN 路线不使用它。
 `standalone/test_policy_qnn.py` 另需供应商 Python `aidlite` 和 NumPy。
 这些可选依赖不属于默认离线检查的安装范围。
 
-源码包包含原机配置和当前模型，模型的公开再分发许可仍需确认。
 
 ## 部署
 
@@ -254,30 +277,11 @@ journalctl -u wdblh.service
 sudo systemctl stop wdblh.service
 ```
 
-## 离线检查
 
-离线检查用于源码构建和无设备测试，与上述实机启动分开执行。
-安装基础构建依赖后，在工程根目录创建隔离 Python 环境：
-
-```bash
-python3 -m venv .venv-offline
-. .venv-offline/bin/activate
-python -m pip install -r tests/requirements.txt
-bash scripts/check_offline.sh
-```
-
-脚本在 `build-offline/` 构建程序，并运行 CTest 和 Python 检查。
-正常结束时，CTest 的 3 项测试和 Python 的 8 项测试应全部通过。
-脚本不启动主控、不访问串口，也不安装系统服务。
-
-离线脚本同时编译硬件诊断工具，但不运行这些工具。
-手动运行电机诊断工具可能发送电机命令。
-离线主控未启用推理后端，启动时会在打开设备前退出。
-当前交付的目标板构建、真实推理和实机流程仍待复核。
 
 ## 致谢
 
-本工程基于 [fan-ziqi/rl_sar](https://github.com/fan-ziqi/rl_sar) 提取。
-感谢原作者 Ziqi Fan 和上游贡献者提供的强化学习部署框架。
-必要公共代码和上游版权声明予以保留。
-上游贡献者名单见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。
+本工程基于 [fan-ziqi/rl_sar](https://github.com/fan-ziqi/rl_sar) 。<br>
+感谢原作者 Ziqi Fan 和上游贡献者提供的强化学习部署框架。<br>
+必要公共代码和上游版权声明予以保留。<br>
+上游贡献者名单见 [CONTRIBUTORS.md](CONTRIBUTORS.md)。<br>
